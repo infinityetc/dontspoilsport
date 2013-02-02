@@ -32,11 +32,13 @@ header {
 }
 
 h1 {
-        font-family: "ESPN", Arial;
-	font-size: 200%;
-        color: #fff;
 	margin: 0 auto;
 	width: 50%;
+        font-family: "ESPN", Arial;
+	font-size: 300%;
+	font-weight: normal;
+        color: #fff;
+	text-align: center;
 }
 
 .wrapper {
@@ -63,20 +65,20 @@ h1 {
 }
 
 h2 {
+	padding-top: 1em;
 	text-transform: uppercase;
-	font-size: 60%;
+	font-size: 100%;
+	font-weight: normal;
+	border-top: 1px solid #ccc;
 }
 
 input[type=checkbox] {
 	display: none;
 }
 
-input[type=checkbox]:checked + label {
-	border: 3px solid #0f0;
-}
-
 input[type=checkbox] + label {
 	display: inline-block;
+	margin-bottom: 0.25em;
 	width: 85%;
 	height: 62px;
 	padding: 10px 0 0 15%;
@@ -85,140 +87,170 @@ input[type=checkbox] + label {
 	background-repeat: no-repeat;
 }
 
+input[type=checkbox]:checked + label {
+	box-shadow: inset 0 0 10px #333;
+}
+
 /*** Individual Teams on Front Page ***/
 
 label[for=BAL] {
-	background-position: 0px 0px;
+	background-position: 10px 0px;
 }
 
 label[for=CIN] {
-	background-position: 0px -72px;
+	background-position: 10px -72px;
 }
 
 label[for=CLE] {
-	background-position: 0px -144px;
+	background-position: 10px -144px;
 }
 
 label[for=PIT] {
-	background-position: 0px -216px;
+	background-position: 10px -216px;
 }
 
 label[for=HOU] {
-	background-position: 0px -288px;
+	background-position: 10px -288px;
 }
 
 label[for=IND] {
-	background-position: 0px -360px;
+	background-position: 10px -360px;
 }
 
 label[for=JAC] {
-	background-position: 0px -432px;
+	background-position: 10px -432px;
 }
 
 label[for=TEN] {
-	background-position: 0px -504px;
+	background-position: 10px -504px;
 }
 
 label[for=BUF] {
-	background-position: 0px -576px;
+	background-position: 10px -576px;
 }
 
 label[for=MIA] {
-	background-position: 0px -648px;
+	background-position: 10px -648px;
 }
 
 label[for=NE] {
-	background-position: 0px -720px;
+	background-position: 10px -720px;
 }
 
 label[for=NYJ] {
-	background-position: 0px -792px;
+	background-position: 10px -792px;
 }
 
 label[for=DEN] {
-	background-position: 0px -864px;
+	background-position: 10px -864px;
 }
 
 label[for=KC] {
-	background-position: 0px -936px;
+	background-position: 10px -936px;
 }
 
 label[for=OAK] {
-	background-position: 0px -1008px;
+	background-position: 10px -1008px;
 }
 
 label[for=SD] {
-	background-position: 0px -1080px;
+	background-position: 10px -1080px;
 }
 
 label[for=CHI] {
-	background-position: 0px -1152px;
+	background-position: 10px -1152px;
 }
 
 label[for=DET] {
-	background-position: 0px -1224px;
+	background-position: 10px -1224px;
 }
 
 label[for=GB] {
-	background-position: 0px -1296px;
+	background-position: 10px -1296px;
 }
 
 label[for=MIN] {
-	background-position: 0px -1368px;
+	background-position: 10px -1368px;
 }
 
 label[for=ATL] {
-	background-position: 0px -1440px;
+	background-position: 10px -1440px;
 }
 
 label[for=CAR] {
-	background-position: 0px -1512px;
+	background-position: 10px -1512px;
 }
 
 label[for=NO] {
-	background-position: 0px -1584px;
+	background-position: 10px -1584px;
 }
 
 label[for=TB] {
-	background-position: 0px -1656px;
+	background-position: 10px -1656px;
 }
 
 label[for=DAL] {
-	background-position: 0px -1728px;
+	background-position: 10px -1728px;
 }
 
 label[for=NYG] {
-	background-position: 0px -1800px;
+	background-position: 10px -1800px;
 }
 
 label[for=PHI] {
-	background-position: 0px -1872px;
+	background-position: 10px -1872px;
 }
 
 label[for=WAS] {
-	background-position: 0px -1944px;
+	background-position: 10px -1944px;
 }
 
 label[for=ARI] {
-	background-position: 0px -2016px;
+	background-position: 10px -2016px;
 }
 
 label[for=SF] {
-	background-position: 0px -2088px;
+	background-position: 10px -2088px;
 }
 
 label[for=SEA] {
-	background-position: 0px -2160px;
+	background-position: 10px -2160px;
 }
 
 label[for=STL] {
-	background-position: 0px -2232px;
+	background-position: 10px -2232px;
+}
+
+/*** End Team Logos ***/
+
+input[type=submit] {
+	margin: 1em 10%;
+	padding: 0.5em 0;
+	width: 80%;
+	font-size: 150%;
+	color: #fff;
+	background-color: #C72524;
+	border: 5px solid #C72524;
+}
+
+input[type=submit]:hover {
+	border: 5px solid #fff;
+	cursor: pointer;
 }
 
 footer {
-	margin: 0 auto;
+	margin: 1em auto 0;
 	min-height: 4em;
 	width: 50%;
+	padding: 0 0.5em;
+	background-color: #C72524;
+	border: 1px solid #C72524;
+}
+
+footer a {
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
 }
 
 #scores{line-height: 1.5em;}

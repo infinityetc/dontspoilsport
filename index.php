@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Don't Spoil Sport</title>
-<link rel="stylesheet" type="text/css" href="/style.css">
-</head>
-
-<body>
-
-<header>
-<h1>Don't Spoil Sport</h1>
-</header>
-
-
-<div class="wrapper">
-<div class="main">
+<?php
+require_once('include/header.php');
+?>
 
 <p>Don't spoil their ending for me:</p>
 
@@ -103,15 +90,6 @@
 
 </form>
 
-</div><!-- .main -->
-
-<footer>
-<a href="about">About Us</a>
-</footer>
-
-
-</div><!-- .wrapper -->
-
-</body>
-
-</html>
+<?php
+include_once('include/footer.php');
+?>
