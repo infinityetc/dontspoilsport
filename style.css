@@ -68,8 +68,7 @@ h2 {
 }
 
 input[type=checkbox] {
-	display: inline-block;
-	padding: 100px;
+	display: none;
 }
 
 input[type=checkbox]:checked + label {
@@ -78,14 +77,142 @@ input[type=checkbox]:checked + label {
 
 input[type=checkbox] + label {
 	display: inline-block;
-	width: 100%;
-	height: 20px;
-	padding: 30px 0;
+	width: 85%;
+	height: 62px;
+	padding: 10px 0 0 15%;
+	font-size: 250%;
 	background-image: url('/images/logos.png');
+	background-repeat: no-repeat;
 }
 
+/*** Individual Teams on Front Page ***/
+
 label[for=BAL] {
-	background-position: 80px 560px;
+	background-position: 0px 0px;
+}
+
+label[for=CIN] {
+	background-position: 0px -72px;
+}
+
+label[for=CLE] {
+	background-position: 0px -144px;
+}
+
+label[for=PIT] {
+	background-position: 0px -216px;
+}
+
+label[for=HOU] {
+	background-position: 0px -288px;
+}
+
+label[for=IND] {
+	background-position: 0px -360px;
+}
+
+label[for=JAC] {
+	background-position: 0px -432px;
+}
+
+label[for=TEN] {
+	background-position: 0px -504px;
+}
+
+label[for=BUF] {
+	background-position: 0px -576px;
+}
+
+label[for=MIA] {
+	background-position: 0px -648px;
+}
+
+label[for=NE] {
+	background-position: 0px -720px;
+}
+
+label[for=NYJ] {
+	background-position: 0px -792px;
+}
+
+label[for=DEN] {
+	background-position: 0px -864px;
+}
+
+label[for=KC] {
+	background-position: 0px -936px;
+}
+
+label[for=OAK] {
+	background-position: 0px -1008px;
+}
+
+label[for=SD] {
+	background-position: 0px -1080px;
+}
+
+label[for=CHI] {
+	background-position: 0px -1152px;
+}
+
+label[for=DET] {
+	background-position: 0px -1224px;
+}
+
+label[for=GB] {
+	background-position: 0px -1296px;
+}
+
+label[for=MIN] {
+	background-position: 0px -1368px;
+}
+
+label[for=ATL] {
+	background-position: 0px -1440px;
+}
+
+label[for=CAR] {
+	background-position: 0px -1512px;
+}
+
+label[for=NO] {
+	background-position: 0px -1584px;
+}
+
+label[for=TB] {
+	background-position: 0px -1656px;
+}
+
+label[for=DAL] {
+	background-position: 0px -1728px;
+}
+
+label[for=NYG] {
+	background-position: 0px -1800px;
+}
+
+label[for=PHI] {
+	background-position: 0px -1872px;
+}
+
+label[for=WAS] {
+	background-position: 0px -1944px;
+}
+
+label[for=ARI] {
+	background-position: 0px -2016px;
+}
+
+label[for=SF] {
+	background-position: 0px -2088px;
+}
+
+label[for=SEA] {
+	background-position: 0px -2160px;
+}
+
+label[for=STL] {
+	background-position: 0px -2232px;
 }
 
 footer {
