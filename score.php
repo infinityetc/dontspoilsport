@@ -1,64 +1,52 @@
 <?php
 include('include/header.php');
-echo '<h3>Week 17</h3>';
-echo '<div id="scores">';
-$games = getGames(@$_GET['nfl'], 17);
-displayGames($games);
-echo '</div><br />';
+include('include/lib.php');
+
+$self = preg_replace('#&week=[^&]+#','',$_SERVER['REQUEST_URI']);
+$self = preg_replace('#&season=[^&]+#','',$self);
+?>
+
+<div id="week">Regular Season - Week: 
+<a href="<?php echo $self ?>&season=REG&week=17">17</a>
+<a href="<?php echo $self ?>&season=REG&week=16">16</a>
+<a href="<?php echo $self ?>&season=REG&week=15">15</a>
+<a href="<?php echo $self ?>&season=REG&week=14">14</a>
+<a href="<?php echo $self ?>&season=REG&week=13">13</a>
+<a href="<?php echo $self ?>&season=REG&week=12">12</a>
+<a href="<?php echo $self ?>&season=REG&week=11">11</a>
+<a href="<?php echo $self ?>&season=REG&week=10">10</a>
+<a href="<?php echo $self ?>&season=REG&week=9">9</a>
+<a href="<?php echo $self ?>&season=REG&week=8">8</a>
+<a href="<?php echo $self ?>&season=REG&week=7">7</a>
+<a href="<?php echo $self ?>&season=REG&week=6">6</a>
+<a href="<?php echo $self ?>&season=REG&week=5">5</a>
+<a href="<?php echo $self ?>&season=REG&week=4">4</a>
+<a href="<?php echo $self ?>&season=REG&week=3">3</a>
+<a href="<?php echo $self ?>&season=REG&week=2">2</a>
+<a href="<?php echo $self ?>&season=REG&week=1">1</a>
+<br />
+Post Season - Week: 
+<a href="<?php echo $self ?>&season=PST&&week=3">3</a>
+<a href="<?php echo $self ?>&season=PST&&week=2">2</a>
+<a href="<?php echo $self ?>&season=PST&&week=1">1</a>
+</div>
+
+<?php
+$week=@$_GET['week'];
+if(empty($week)){$week=3;}
+$season=@$_GET['season'];
+if(empty($_GET['season'])){$season='PST';}
+?>
+
+<h3>Week <?php echo $week; ?></h3>
+<div id="scores">
+
+<?php
+displayGames(getGames(@$_GET['nfl'], $week, $season));
+?>
+
+</div><br />
+
+<?php
 include('include/footer.php');
-
-
-
-
-
-function getGames($hideFilter=null, $week){
-    $xml = simplexml_load_file('http://api.sportsdatallc.org/nfl-t1/2012/REG/'.$week.'/boxscore.xml?api_key=tm78nsysz4vyf9dg9vapkdnp');
-    foreach($xml->game as $game){
-        // if the hideFilter is the current team, skip it. If the hide filter is an array check if the current team is in the array
-        $team1 = $game->team->attributes()->id;
-        $team2 = $game->team[1]->attributes()->id;
-        
-        if($team1 == $hideFilter || is_array($hideFilter) && array_search($team1, $hideFilter) !== FALSE){
-            continue;
-        }elseif($team2 == $hideFilter || is_array($hideFilter) && array_search($team2, $hideFilter) !== FALSE){
-            continue;
-        }
-
-        $games[] = $game;
-
-    }
-    return $games;
-}
-
-function displayGames($games){
-//var_dump($games);
-  foreach($games as $game){
-      
-    $score1 = (int)$game->team[0]->scoring->attributes()->points;
-    $score2 = (int)$game->team[1]->scoring->attributes()->points;
-
-    echo $game->team[0]->attributes()->market.' '.$game->team[0]->attributes()->name;
-    
-    if($score1 > $score2){
-        echo '<span style="color: green;">';
-    }else{
-        echo '<span style="color: red;">';
-    }
-    echo ' '.$score1.'';
-    echo '</span> vs ';
-
-    
-    echo $game->team[1]->attributes()->market.' '.$game->team[1]->attributes()->name;
-    
-    if($score1 < $score2){
-        echo '<span style="color: green;">';
-    }else{
-        echo '<span style="color: red;">';
-    }
-    echo ' '.$score2.'';
-
-    echo '</span><br>';
-          
-  }
-}
 ?>

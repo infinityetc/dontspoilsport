@@ -4,7 +4,7 @@ require_once('include/header.php');
 
 <p>Don't spoil their ending for me:</p>
 
-<form action="score.php" method="get">
+<form action="all.php" method="get">
 
 <h2>AFC-North</h2>
 	<input type="checkbox" name="nfl[]" id="BAL" value="BAL">
