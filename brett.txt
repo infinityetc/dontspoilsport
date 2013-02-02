@@ -1,0 +1,76 @@
+object(SimpleXMLElement)#2 (2) {
+  ["@attributes"]=>
+  array(5) {
+    ["id"]=>
+    string(3) "MIN"
+    ["market"]=>
+    string(9) "Minnesota"
+    ["name"]=>
+    string(7) "Vikings"
+    ["remaining_challenges"]=>
+    string(1) "2"
+    ["remaining_timeouts"]=>
+    string(1) "2"
+  }
+  ["scoring"]=>
+  object(SimpleXMLElement)#3 (2) {
+    ["@attributes"]=>
+    array(1) {
+      ["points"]=>
+      string(2) "26"
+    }
+    ["quarter"]=>
+    array(5) {
+      [0]=>
+      object(SimpleXMLElement)#5 (1) {
+        ["@attributes"]=>
+        array(2) {
+          ["number"]=>
+          string(1) "1"
+          ["points"]=>
+          string(1) "0"
+        }
+      }
+      [1]=>
+      object(SimpleXMLElement)#6 (1) {
+        ["@attributes"]=>
+        array(2) {
+          ["number"]=>
+          string(1) "2"
+          ["points"]=>
+          string(1) "7"
+        }
+      }
+      [2]=>
+      object(SimpleXMLElement)#7 (1) {
+        ["@attributes"]=>
+        array(2) {
+          ["number"]=>
+          string(1) "3"
+          ["points"]=>
+          string(1) "7"
+        }
+      }
+      [3]=>
+      object(SimpleXMLElement)#8 (1) {
+        ["@attributes"]=>
+        array(2) {
+          ["number"]=>
+          string(1) "4"
+          ["points"]=>
+          string(1) "9"
+        }
+      }
+      [4]=>
+      object(SimpleXMLElement)#9 (1) {
+        ["@attributes"]=>
+        array(2) {
+          ["number"]=>
+          string(1) "5"
+          ["points"]=>
+          string(1) "3"
+        }
+      }
+    }
+  }
+}

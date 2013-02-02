@@ -1,0 +1,97 @@
+
+@font-face {
+        font-family: "ESPN";
+        src: url(http://:/) format("No-IE-404"), url('/fonts/esp_bdit.ttf');
+}
+
+html {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+        color: #333;
+        background-color: #333;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	padding: 2em 0;	
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #C72524 40%, #333333 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #C72524 40%, #333333 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #C72524 40%, #333333 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.4, #C72524), color-stop(1, #333333));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #C72524 40%, #333333 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #C72524 40%, #333333 100%);
+	background-color: #C72524;
+}
+
+h1 {
+        font-family: "ESPN", Arial;
+	font-size: 200%;
+        color: #fff;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.wrapper {
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #333333 0%, #F5F5F5 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #333333 0%, #F5F5F5 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #333333 0%, #F5F5F5 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #333333), color-stop(1, #F5F5F5));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #333333 0%, #F5F5F5 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #333333 0%, #F5F5F5 100%);
+}
+
+.main {
+	margin: 0 auto;
+	width: 50%;
+	padding: 0 0.5em;
+	background-color: #eee;
+	border: #666 solid 1px;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 60%;
+}
+
+input[type=checkbox] {
+	display: inline-block;
+	padding: 100px;
+}
+
+input[type=checkbox]:checked + label {
+	border: 3px solid #0f0;
+}
+
+input[type=checkbox] + label {
+	display: inline-block;
+	width: 100%;
+	height: 20px;
+	padding: 30px 0;
+	background-image: url('/images/logos.png');
+}
+
+label[for=BAL] {
+	background-position: 80px 560px;
+}
+
+footer {
+	margin: 0 auto;
+	min-height: 4em;
+	width: 50%;
+}
+
+#scores{line-height: 1.5em;}
