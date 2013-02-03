@@ -14,8 +14,7 @@ function displayNews($filters){
     $itemsToDisplay = moveItemsWithImagesToTop($itemsToDisplay);
     displayItems($itemsToDisplay);
     global $filteredCount;
-    echo "<BR>";
-    echo "Filtered $filteredCount headlines";
+    echo "<div class='filtered'>Filtered $filteredCount headlines</div>";
 }
 
 function moveItemsWithImagesToTop($itemsToDisplay){
@@ -43,26 +42,28 @@ function displayItems($itemsToDisplay){
     $firstItem = array_pop($itemsToDisplay);
 //    $firstItem = $itemsToDisplay[0];
 
+    echo "<div class='first'>";
     $firstImages = $firstItem["images"];
     if(sizeof($firstImages) > 0 ){
         $firstImage = array_pop($firstImages);
         $caption = $firstImage["caption"]; 
         $url = extractImageUrl($firstItem);
-        echo "<img src=\"$url\"/><br>$caption<br>";
+        echo "<img src=\"$url\"/><span class='caption'>$caption</span>";
     }
     displayItem($firstItem);
-    echo "<br>";
+    echo "</div><!-- .first -->";
 
+    echo "<div class='second'>";
     $secondItem = array_pop($itemsToDisplay);
     $secondImages = $secondItem["images"];
     if(sizeof($secondImages) >0 ){
         $secondImage = array_pop($secondImages);
         $secondUrl = extractImageUrl($secondItem);
         $secondCaption = $secondImage["caption"];
-        echo "<img src=\"$secondUrl\"/><br>$secondCaption<br>";
+        echo "<img src=\"$secondUrl\"/><span class='caption'>$secondCaption</span>";
     }
     displayItem($secondItem);
-    echo "<br>";
+    echo "</div><!-- .second -->";
 
     foreach($itemsToDisplay as $item){
         displayItem($item);
@@ -75,10 +76,11 @@ function extractImageUrl($item){
 }
 
 function displayItem($item){
-    $head = $item["headline"];
+    $head = trim($item["headline"]);
     $link = $item["links"]["web"]["href"];
     $type=$item["type"];
-    echo "$type<a href=\"cleansedArticle.php?link=$link\" >$head</a>";
+    echo "<a href=\"cleansedArticle.php?head=$head&link=$link\" >$head</a>";
+    echo "<span class='caption'>$type</span>";
     echo "<br>";
 }
 
