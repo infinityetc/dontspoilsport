@@ -29,9 +29,7 @@ function displayGames($games){
     $score1 = (int)$game->team[0]->scoring->attributes()->points;
     $score2 = (int)$game->team[1]->scoring->attributes()->points;
 
-    echo '<tr>';
-
-    echo '<td class="name">';
+    echo '<tr class="home"><td class="name">';
     echo $game->team[0]->attributes()->market.' '.$game->team[0]->attributes()->name;
     echo '</td>';
 
@@ -41,9 +39,9 @@ function displayGames($games){
         echo '<td class="lose">';
     }
     echo ' '.$score1.'';
-    echo '</td>';
+    echo '</td></tr>';
 
-    echo '<td class="name">';
+    echo '<tr class="away"><td class="name">';
     echo $game->team[1]->attributes()->market.' '.$game->team[1]->attributes()->name;
     echo '</td>';
     
@@ -53,7 +51,7 @@ function displayGames($games){
         echo '<td class="lose">';
     }
     echo ' '.$score2.'';
-    echo '</td>';
+    echo '</td></tr>';
 
   }
 

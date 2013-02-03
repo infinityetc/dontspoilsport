@@ -1,12 +1,5 @@
 <?php
 
-include('include/header.php');
-echo '<h3>News</h3>';
-echo '<div id="news">';
-displayNews(@$_GET['nfl']);
-echo '</div><br />';
-include('include/footer.php');
-
 $filteredCount = 0;
 
 function displayNews($filters){
@@ -84,7 +77,8 @@ function extractImageUrl($item){
 function displayItem($item){
     $head = $item["headline"];
     $link = $item["links"]["web"]["href"];
-    echo "<a href=\"cleansedArticle.php?link=$link\" >$head</a>";
+    $type=$item["type"];
+    echo "$type<a href=\"cleansedArticle.php?link=$link\" >$head</a>";
     echo "<br>";
 }
 
@@ -198,38 +192,38 @@ function displayBatch($espnFilters,$limit,$offset){
 
 function getEspnTeamId($teamCode){
     $teamIdArray = array(
-        "atl" => 1,
-        "ari" => 22, 
+        "ATL" => 1,
+        "ARI" => 22, 
         "BAL" => 33,
         "BUF" => 2,
-        "car" => 29,
-        "chi" => 3,
+        "CAR" => 29,
+        "CHI" => 3,
         "CIN" => 4,
         "CLE" => 5,
-        "dal" => 6,
+        "DAL" => 6,
         "DEN" => 7,
-        "det" => 8,
-        "gbp" => 9,
+        "DET" => 8,
+        "GB" => 9,
         "HOU" => 34,
         "IND" => 11,
         "JAC" => 30,
         "KC" => 12,
         "MIA" => 15,
-        "min" => 16,
+        "MIN" => 16,
         "NE" => 17,
-        "nos" => 18,
-        "nyg" => 19,
+        "NO" => 18,
+        "NYG" => 19,
         "NYJ" => 20,
         "OAK" => 13,
-        "phl" => 21,
+        "PHI" => 21,
         "PIT" => 23,
         "SD" => 24,
-        "sff" => 25,
-        "sea" => 26,
-        "stl" => 14,
-        "tam" => 27,
+        "SF" => 25,
+        "SEA" => 26,
+        "STL" => 14,
+        "TB" => 27,
         "TEN" => 10,
-        "wsh" => 28,
+        "WAS" => 28,
     );
     return "$teamIdArray[$teamCode]";
 }

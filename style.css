@@ -271,6 +271,8 @@ footer a {
 
 /*** ALL ***/
 
+/*** Scores ***/
+
 .scores {
 	display: inline-block;
 	width: 23%;
@@ -281,6 +283,38 @@ footer a {
 	background-color: #333;
 }
 
+.scores a {
+	display: inline-block;
+	border: 1px solid #fff;
+	padding: 0.25em 0;
+	width: 2em;
+	color: #fff;
+	text-decoration: none;
+}
 
+table {
+	border-collapse: collapse;
+}
+
+tr.home td {
+	padding-top: 0.5em;
+	border-top: 1px solid #999;
+}
+
+tr.away td {
+	padding-bottom: 0.5em;
+}
+
+td.name {
+	width: 100%;
+}
+
+td.win {
+	font-weight: bold;
+}
+
+td.lose {
+	color: #ccc;
+}
 
 #scores{line-height: 1.5em;}
