@@ -110,6 +110,10 @@ h2 {
 	border: none;
 }
 
+h2.nomargin {
+	margin-top: 0;
+}
+
 input[type=checkbox] {
 	display: none;
 }
@@ -314,15 +318,28 @@ footer a {
 .scores {
 	display: inline-block;
 	vertical-align: top;
-	width: 23%;
-	padding: 1%;
-	margin: 20px 1%;
+	width: 28%;
 	font-size: 75%;
 	color: #fff;
+}
+
+.spoil {
+	margin-top: 20px;
+}
+
+.spoil a.unfilter {
+	width: 100%;
+	margin: 0 0 0.5em 0;
+}
+
+.unspoil {
+	padding: 3%;
+	margin: 10px 1%;
 	background-color: #333;
 }
 
-a#change {
+a#change,
+a.unfilter {
 	display: inline-block;
 	margin: 0.5em 10% 0.25em;
 	padding: 0.5em 0;
@@ -382,10 +399,12 @@ td.name {
 
 td.win {
 	font-weight: bold;
+	text-align: center;
 }
 
 td.lose {
 	color: #ccc;
+	text-align: center;
 }
 
 /*** News ***/
@@ -445,6 +464,49 @@ p.caption {
 	margin: 20px 0 0 4%;
 	padding-left: 5%;
 	border-left: 1px solid #ccc;
+	font-size: 75%;
+}
+
+.news ul.tabs {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+ul.tabs li {
+	display: inline-block;
+	margin-bottom: 0.5em;
+}
+
+ul.tabs li a {
+	display: inline-block;
+	width: 8em;
+	padding: 0.5em 0;
+	text-align: center;
+	border: 1px solid #333;
+}
+
+ul.tabs li a.selected {
+	color: #fff;
+	background-color: #C72524;
+}
+
+.other {
+	display: none;
+}
+
+#previews {
+	display: block;
+}
+
+.other h3 {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+.other div {
 	font-size: 75%;
 }
 
