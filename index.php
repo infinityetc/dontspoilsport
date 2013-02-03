@@ -15,6 +15,8 @@ require_once('include/header.php');
 
 <form action="all.php" method="get">
 
+<div class="division">
+
 <h2 id="AFC-N">AFC-North</h2>
 	<input type="checkbox" name="nfl[]" id="BAL" value="BAL">
 	<label for="BAL">Baltimore Ravens</label>
@@ -55,6 +57,10 @@ require_once('include/header.php');
 	<input type="checkbox" name="nfl[]" id="SD" value="SD">
 	<label for="SD">San Diego Chargers</label>
 
+</div><!-- .division -->
+
+<div class="division">
+
 <h2 id="NFC-N">NFC-North</h2>
 	<input type="checkbox" name="nfl[]" id="CHI" value="CHI">
 	<label for="CHI">Chicago Bears</label>
@@ -94,6 +100,8 @@ require_once('include/header.php');
 	<label for="SEA">Seattle Seahawks</label>
 	<input type="checkbox" name="nfl[]" id="STL" value="STL">
 	<label for="STL">St. Louis Rams</label>
+
+</div><!-- .division -->
 
 <input type="submit" value="See Everything Else">
 

@@ -89,12 +89,21 @@ a.jump {
 	text-decoration: none;
 }
 
+.division {
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	margin-left: 2%;
+}
+
 h2 {
-	padding-top: 1em;
+	clear: both;
+	padding: 1em 0;
 	text-transform: uppercase;
 	font-size: 100%;
 	font-weight: normal;
 	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
 .scores h2 {
@@ -108,12 +117,14 @@ input[type=checkbox] {
 input[type=checkbox] + label {
 	display: inline-block;
 	margin-bottom: 0.25em;
-	width: 85%;
-	height: 62px;
-	padding: 10px 0 0 15%;
-	font-size: 250%;
+	width: 75%;
+	height: 52px;
+	padding: 20px 0 0 100px;
+	font-size: 150%;
 	background-image: url('/images/logos.png');
 	background-repeat: no-repeat;
+	float: left;
+	clear: left;
 }
 
 input[type=checkbox]:checked + label {
@@ -272,12 +283,11 @@ input[type=submit] {
 	/* W3C Markup, IE10 Release Preview */ 
 	background-image: linear-gradient(to bottom, #C72524 0%, #801817 100%);
 	background-color: #C72524;
-	border: 5px solid #fff;
+	border: none;
 	border-radius: 10px;
 }
 
 input[type=submit]:hover {
-	border: 5px solid #801817;
 	cursor: pointer;
 }
 
@@ -436,4 +446,20 @@ p.caption {
 	padding-left: 5%;
 	border-left: 1px solid #ccc;
 	font-size: 75%;
+}
+
+@media only screen and (max-width: 750px) {
+
+	html {
+		min-width: 525px;
+	}
+
+	.main {
+		width: 95%;
+	}
+
+	.division {
+		width: 95%;
+	}
+
 }
