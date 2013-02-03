@@ -65,12 +65,40 @@ h1 {
 	border: #666 solid 1px;
 }
 
+a.jump {
+	display: inline-block;
+	margin: 0.25em;
+	padding: 0.5em;
+	font-size: 100%;
+	color: #fff;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #C72524), color-stop(1, #801817));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #C72524 0%, #801817 100%);
+	background-color: #C72524;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
 h2 {
 	padding-top: 1em;
 	text-transform: uppercase;
 	font-size: 100%;
 	font-weight: normal;
 	border-top: 1px solid #ccc;
+}
+
+.scores h2 {
+	border: none;
 }
 
 input[type=checkbox] {
@@ -275,21 +303,54 @@ footer a {
 
 .scores {
 	display: inline-block;
+	vertical-align: top;
 	width: 23%;
 	padding: 1%;
-	margin: 1%;
+	margin: 20px 1%;
 	font-size: 75%;
 	color: #fff;
 	background-color: #333;
 }
 
-.scores a {
+a#change {
 	display: inline-block;
-	border: 1px solid #fff;
-	padding: 0.25em 0;
-	width: 2em;
+	margin: 0.5em 10% 0.25em;
+	padding: 0.5em 0;
+	width: 80%;
+	font-size: 150%;
+	color: #fff;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #C72524), color-stop(1, #801817));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #C72524 0%, #801817 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #C72524 0%, #801817 100%);
+	background-color: #C72524;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#week a {
+	display: inline-block;
+	margin: 0.25em 1em 0 0;
+	padding: 0.5em 0;
+	width: 3em;
 	color: #fff;
 	text-decoration: none;
+	text-align: center;
+	border: 1px solid #fff;
+}
+
+.scores a.selected {
+	font-weight: bold;
+	background-color: #C72524;
 }
 
 table {
@@ -317,4 +378,17 @@ td.lose {
 	color: #ccc;
 }
 
-#scores{line-height: 1.5em;}
+/*** News ***/
+
+.news {
+	display: inline-block;
+	vertical-align: top;
+	margin: 20px 1%;
+	padding-left: 3%;
+	width: 65%;
+	border-left: 1px solid #ccc;	
+}
+
+.news img.first {
+	border: 5px solid #999;
+}
