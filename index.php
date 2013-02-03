@@ -103,7 +103,7 @@ require_once('include/header.php');
 
 </div><!-- .division -->
 
-<input type="submit" value="See Everything Else">
+<input type="submit" value="Read Unspoiled News">
 
 </form>
 
