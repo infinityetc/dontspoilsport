@@ -13,8 +13,6 @@ function displayNews($filters){
     $itemsToDisplay = getItemsToDisplay($espnFilters,10);
     $itemsToDisplay = moveItemsWithImagesToTop($itemsToDisplay);
     displayItems($itemsToDisplay);
-    global $filteredCount;
-    echo "<div class='filtered'>Filtered $filteredCount headlines</div>";
 }
 
 function moveItemsWithImagesToTop($itemsToDisplay){
@@ -42,13 +40,14 @@ function displayItems($itemsToDisplay){
     $firstItem = array_pop($itemsToDisplay);
 //    $firstItem = $itemsToDisplay[0];
 
+    $i = 0;
     echo "<div class='first'>";
     $firstImages = $firstItem["images"];
     if(sizeof($firstImages) > 0 ){
         $firstImage = array_pop($firstImages);
         $caption = $firstImage["caption"]; 
         $url = extractImageUrl($firstItem);
-        echo "<img src=\"$url\"/><span class='caption'>$caption</span>";
+        echo "<img src=\"$url\"/><p class='caption'>$caption</p>";
     }
     displayItem($firstItem);
     echo "</div><!-- .first -->";
@@ -60,14 +59,28 @@ function displayItems($itemsToDisplay){
         $secondImage = array_pop($secondImages);
         $secondUrl = extractImageUrl($secondItem);
         $secondCaption = $secondImage["caption"];
-        echo "<img src=\"$secondUrl\"/><span class='caption'>$secondCaption</span>";
+        echo "<img src=\"$secondUrl\"/><p class='caption'>$secondCaption</p>";
     }
     displayItem($secondItem);
+    $i = 1;
+
+    global $filteredCount;
+    echo "<div class='filtered'>Filtered $filteredCount headlines</div>";
+
     echo "</div><!-- .second -->";
 
+    echo '<ul>';
     foreach($itemsToDisplay as $item){
-        displayItem($item);
-    }
+        if ($i<1) {
+            displayItem($item);
+        } else {
+            echo '<li>';
+            displayItem($item);
+            echo '</li>';
+        };
+        $i++;
+    };
+    echo '</ul>';
 }
 
 function extractImageUrl($item){
@@ -80,8 +93,6 @@ function displayItem($item){
     $link = $item["links"]["web"]["href"];
     $type=$item["type"];
     echo "<a href=\"cleansedArticle.php?head=$head&link=$link\" >$head</a>";
-    echo "<span class='caption'>$type</span>";
-    echo "<br>";
 }
 
 function loadBatch(&$itemsToDisplay,$espnFilters,$offset,$increments){

@@ -2,9 +2,21 @@
 include('include/header.php');
 include('include/lib.php');
 
-$self = preg_replace('#&week=[^&]+#','',$_SERVER['REQUEST_URI']);
-$self = preg_replace('#&season=[^&]+#','',$self);
+$self = preg_replace('#[&?]week=[^&]+#','',$_SERVER['REQUEST_URI']);
+$self = preg_replace('#[&?]season=[^&]+#','',$self);
+if(stripos($self,'?') === false){
+   $self .= '?';
+}
+
+if(!empty($_GET['nfl'])){
+    echo 'Filtered Out: ';
+    foreach($_GET['nfl'] as $nfl){
+     echo '<a href="'.str_replace('score.php&','score.php?',preg_replace('#[&?]nfl[^=]+='.$nfl.'#','',$_SERVER['REQUEST_URI'])).'">'.$nfl.'</a> ';
+    }
+}
+
 ?>
+
 
 <div id="week">Regular Season - Week: 
 <a href="<?php echo $self ?>&season=REG&week=17">17</a>

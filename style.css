@@ -389,6 +389,51 @@ td.lose {
 	border-left: 1px solid #ccc;	
 }
 
-.news img.first {
+.news a {
+	color: #C72524;
+	text-decoration: none;
+}
+
+.news .first img {
 	border: 5px solid #999;
+	width: 100%;
+	height: auto;
+}
+
+.news .first a {
+	font-size: 150%;
+}
+
+.news .second {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	width: 30%;
+}
+
+.news .second img {
+	border: 3px solid #999;
+	width: 95%;
+	height: auto;
+}
+
+p.caption {
+	margin: 0;
+	font-size: 75%;
+	line-height: 1em;
+}
+
+.filtered {
+	margin-top: 2em;
+	width: 100%;
+}
+
+.news ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+	margin: 20px 0 0 4%;
+	padding-left: 5%;
+	border-left: 1px solid #ccc;
+	font-size: 75%;
 }
