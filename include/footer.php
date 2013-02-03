@@ -1,7 +1,7 @@
 </div><!-- .main -->
 
 <footer>
-<a href="about">About Us</a>
+<a href="/about.php">About Us</a>
 </footer>
 
 

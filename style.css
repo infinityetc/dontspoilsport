@@ -510,6 +510,13 @@ ul.tabs li a.selected {
 	font-size: 75%;
 }
 
+.about img {
+	border: 5px solid #999;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
 @media only screen and (max-width: 750px) {
 
 	html {
